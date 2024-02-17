@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Insurance</title>
+    <link href="index.css" rel="stylesheet"/>
+    <link rel="shortcut icon" href="/src/image/favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+    <h1 id="title">Life Insurance</h1>
+    <p id="description">Helping cover what matters to you</p>
+    <form action="example.html" method="post" id="survey-form">
+        
+      <fieldset>
+        <legend>Client Needs</legend>
+          <label for="no-burial"><input id="no-burial" type="checkbox" name="need" value="no-burial"> No Burial Life Insurance</label>
+          <label for="need-more"><input id="need-more" type="checkbox" name="need" value="need-more"> Need More Life Insurance</label>
+          <label for="legacy"><input id="legacy" type="checkbox" name="need" value="legacy"> Leave Behind Money For Legacy</label>
+      </fieldset>
+        
+      <fieldset>
+        <legend>Client Profile</legend>
+          <label for="first-name" id="name-label">First Name: <input id="first-name" name="first-name" type="text" required placeholder="name"/></label>
+          <label for="last-name">Last Name: <input id="last-name" name="last-name" type="text" required /></label>
+          <label for="email" id="email-label">Email: <input id="email" name="email" type="email" required placeholder="email"/></label>
+        <!--<input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required />-->
+          <label for="phone">Phone Number: <input id="phone" name="phone" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="xxx-xxx-xxxx" required></label>
+          <label for="birthday">Birthday: <input id="birthday" name="birthday" type="date" required></label>
+        <!-- personal note: radio i think name needs to match but also forgot value-->
+          <label for="work-status">Are you: <input id="employed" name="work-status" type="radio" value="employed" checked required> Employed
+            <input id="retired" name="work-status" type="radio" value="retired"> Retired</label>
+        <!--⬆ work status, ⬇ type of insurance-->
+          <label for="insurance">Looking For: <input id="life" name="insurance" type="radio" value="life" checked required> Life Insurance  
+            <input id="annuity" name="insurance" type="radio" value="annuity"> Annuity</label>
+            
+          <label for="account-type">Extra Funds: <input id="401k" type="checkbox" name="account-type" value="401k"> 401k 
+            <input id="ira" type="checkbox" name="account-type" value="ira"> IRA 
+            <input id="stock" type="checkbox" name="account-type" value="stock"> Stock </label>
+          
+          <label for="banking">Pay Method: <input id="credit-union" name="banking" type="radio" value="credit-union" checked required> Credit-Union 
+            <input id="bank" name="banking" type="radio" value="bank"> Bank 
+            <input id="ssi-dex" name="banking" type="radio" value="ssi-dex"> SSI DEx </label>
+
+          <label for="funeral">Funeral: <input id="burial" name="funeral" type="radio" value="burial"> Burial
+            <input id="cremation" name="funeral" type="radio" value="cremation"> Cremation</label>
+
+          <label for="tobacco">Tobacco: <input id="yes" name="tobacco" type="radio" value="yes" checked required> Yes
+            <input id="no" name="tobacco" type="radio" value="no"> No</label>
+        </fieldset>
+
+        <fieldset id="medical">
+          <legend>Medical Underwriting</legend>
+            <textarea name="underwriting" id="underwriting" cols="35" rows="10" placeholder="Prescriptopn, Hospitizations, and Surgeries"></textarea>
+        </fieldset>
+
+        <fieldset>
+          <legend>Main Beneficary</legend>
+            <label for="ben-name-1">Name of Beneficary: <input id="ben-name-1" name="ben-name-1" type="text" required></label>
+            <label for="ben-dob-1">Date of Birth: <input id="ben-dob-1" name="ben-dob-1" type="date" value="ben-dob-1" required></label>
+            <label for="ben-rs-1">Relationship: 
+              <select name="ben-rs-1" id="ben-rs-1" required>
+                <option value="">-Pick closest description-</option>
+                <option value="1">Parent</option>
+                <option value="2">Spouse</option>
+                <option value="3">Childern</option>
+                <option value="4">Grandparent</option>
+                <option value="5">Grandchild</option>
+                <option value="6">Relative</option>
+                <option value="7">Domestic Partner</option>
+                <option value="8">Other</option>
+              </select>
+        </fieldset>
+
+        <fieldset>
+          <legend>Secondary Beneficary</legend>
+            <label for="ben-name-2">Name of Beneficary: <input id="ben-name-2" name="ben-name-2" type="text"></label>
+            <label for="ben-dob-2">Date of Birth: <input id="ben-dob-2" name="ben-dob-2" type="date" value="ben-dob-2"></label>
+            <label for="ben-rs-2" id="">Relationship: 
+              <select name="ben-rs-2" id="ben-rs-2">
+                <option value="">-Pick closest description-</option>
+                <option value="1">Parent</option>
+                <option value="2">Spouse</option>
+                <option value="3">Childern</option>
+                <option value="4">Grandparent</option>
+                <option value="5">Grandchild</option>
+                <option value="6">Relative</option>
+                <option value="7">Domestic Partner</option>
+                <option value="8">Other</option>
+              </select>
+        </fieldset>
+        <input id="submit" type="submit" value="Quote"/>
+    </form>
+  </body>
